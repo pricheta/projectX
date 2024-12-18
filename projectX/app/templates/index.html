@@ -10,12 +10,16 @@
     <div>Всем привет! Это мой сайт</div>
     <div><a href="{{ request.base_url }}docs">Ссылка на OpenAPI</a></div>
 
-    <label for="username">Логин:</label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="password">Пароль:</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <div id="loginButton">Войти</div>
 
+    <form action="auth/get_access_token" method="post">
+        <label><b>login</b></label>
+        <input id="login" type="text" placeholder="Введите логин" name="login" required>
+
+        <label><b>password</b></label>
+        <input id="password" type="password" placeholder="Введите пароль" name="password" required>
+
+        <div id="loginButton">Login</div>
+    </form>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,16 +1,16 @@
 const loginButton = document.getElementById("loginButton");
 
 loginButton.addEventListener("click", function() {
-    const username = $("#username").val();
+    const login = $("#login").val();
     const password = $("#password").val();
 
-    if (!username || !password) {
+    if (!login || !password) {
         alert("Пожалуйста, заполните все поля!");
         return;
     }
 
     const data = {
-        login: username,
+        login: login,
         password: password
     };
 
@@ -22,8 +22,8 @@ loginButton.addEventListener("click", function() {
         success: function(response) {
             alert(response);
         },
-        error: function(response) {
-            alert(response);
+        error: function(xhr, status, error) {
+            alert("Произошла ошибка: " + error);
         }
     });
 });

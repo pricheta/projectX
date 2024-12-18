@@ -4,7 +4,7 @@ from fastapi import Request, Security
 from fastapi.routing import APIRouter
 from fastapi.templating import Jinja2Templates
 
-from projectX.models.user import User
+from projectX.models.user import UserModel
 from projectX.dependencies.get_current_user import get_current_user
 
 router = APIRouter()
